@@ -3,11 +3,12 @@ import { Navbar } from "react-bootstrap";
 
 function Header() {
   return (
-    <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="#home">
-        My React App
-      </Navbar.Brand>
-    </Navbar>
+    <div class ="container-fluid">
+        <Navbar bg="dark" variant="dark" expand="md" className="my-navbar">
+        <Navbar.Brand href="#home">COLOURANT</Navbar.Brand>
+        </Navbar>
+    </div>
+    
   );
 }
 
