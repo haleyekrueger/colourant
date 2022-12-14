@@ -3,6 +3,7 @@ import PaletteSelectButton from "./components/PaletteSelectButton"
 import LinkSelectButton from "./components/LinkSelectButton"
 import StartButton from "./components/StartButton"
 import Header from "./components/Header";
+import Form from "./components/Form"
 import './App.css';
 
 function App() {
@@ -10,18 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <br></br>
-      <div>
-        <PaletteSelectButton />
-      </div>
-      <br></br>
-      <div>
-        <LinkSelectButton />
-      </div>
-      <br></br>
-      <div>
-      <StartButton />
-      </div>
-      
+      <Form />
     </div>
   
   );
