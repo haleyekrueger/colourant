@@ -3,24 +3,37 @@ import { useState } from 'react';
 
 const PaletteSelectButton = () => {
     const [formVisible, setFormVisible] = useState(false);
+    
+    const handleClick = () => {
+        setFormVisible(!formVisible);
+      }
 
     return (
-        <div>
-        <button onClick={() => setFormVisible(!formVisible)} class="btn"><span class="material-symbols-outlined">
-        palette
-        </span>
-        </button>
-        if {formVisible && (
+      <div>
+        
+        {formVisible ? (
             <form>
-              <label>Select your color season</label>
+              <label for="color season">Select your color season</label>
               <br></br>
-              <option>Summer</option>
+              <input type="radio" id="summer" name="color season" value="summer"/>
+              <label for="summer">Summer</label>
+              <br></br>
+              <input type="radio" id="autumn" name="color season" value="autumn"/>
+              <label for="autumn">Autumn</label>
+              <br></br><input type="radio" id="winter" name="color season" value="winter"/>
+              <label for="winter">Winter</label>
+              <br></br><input type="radio" id="spring" name="color season" value="spring"/>
+              <label for="spring">Spring</label>
               <br></br>
             </form>
-          )}
+        ) : (
+            <button onClick={handleClick} className="btn">
+            <span className="material-symbols-outlined">palette</span>
+          </button>
+        )}
         </div>
     );
-}
+};
 
 export default PaletteSelectButton;
 
