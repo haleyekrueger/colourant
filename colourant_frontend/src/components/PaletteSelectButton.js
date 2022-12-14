@@ -13,7 +13,7 @@ const PaletteSelectButton = () => {
         
         {formVisible ? (
             <form>
-              <label for="color season">Select your color season</label>
+              <label for="color season">Select your color season: </label>
               <br></br>
               <input type="radio" id="summer" name="color season" value="summer"/>
               <label for="summer">Summer</label>
@@ -25,6 +25,16 @@ const PaletteSelectButton = () => {
               <br></br><input type="radio" id="spring" name="color season" value="spring"/>
               <label for="spring">Spring</label>
               <br></br>
+              <br></br>
+              <label for="tone">Select your tone: </label>
+              <br></br>
+              <input type="radio" id="bright" name="tone" value="bright"/>
+              <label for="bright">Bright</label>
+              <br></br>
+              <input type="radio" id="true" name="tone" value="true"/>
+              <label for="true">True</label>
+              <br></br><input type="radio" id="soft" name="tone" value="soft"/>
+              <label for="soft">Soft</label>
             </form>
         ) : (
             <button onClick={handleClick} className="btn">
